@@ -1,14 +1,15 @@
 package projetobasico.pages;
 
+import static projetobasico.core.DriverFactory.getDriver;
+
 import org.openqa.selenium.By;
 
 import projetobasico.core.BasePage;
-import projetobasico.core.DriverFactory;
 
 public class LoginPage extends BasePage {
 	
 	public void acessarTelaInicial() {
-		DriverFactory.getDriver().get("https://seubarriga.wcaquino.me/");
+		getDriver().get("https://seubarriga.wcaquino.me/");
 	}
 	
 	public void setEmail(String email) {
