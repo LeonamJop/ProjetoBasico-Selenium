@@ -62,6 +62,10 @@ public class BasePage {
 		return combo.getFirstSelectedOption().getText();
 	}
 	
+	public void clicaBotao(By by) {
+		getDriver().findElement(by).click();
+	}
+	
 	public void clicaBotao(String id) {
 		getDriver().findElement(By.id(id)).click();
 	}
