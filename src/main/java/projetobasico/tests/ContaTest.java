@@ -30,4 +30,15 @@ public class ContaTest extends BaseTest {
 		
 		Assert.assertEquals("Informe o nome da conta", contasPage.obterMensagemErro());
 	}
+	
+	@Test
+	public void deveAlterarConta() {
+		menuPage.acessarTelaListarConta();
+		
+		contasPage.clicarAlterarConta("Conta do Teste");
+		contasPage.setNome("Conta do Teste Alterada");
+		contasPage.salvar();
+		
+		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMesagemSucesso());
+	}
 }
