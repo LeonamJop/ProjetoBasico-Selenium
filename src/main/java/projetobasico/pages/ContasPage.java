@@ -25,6 +25,5 @@ public class ContasPage extends BasePage {
 	public void clicarAlterarConta(String string) {
 		obterCelula("Conta", string, "Ações", "tabelaContas")
 			.findElement(By.xpath("//table[@id='tabelaContas']/tbody/tr/td[2]/a[1]/span[@class='glyphicon glyphicon-edit']")).click();
-		
 	}
 }
