@@ -2,8 +2,6 @@ package projetobasico.pages;
 
 import static projetobasico.core.DriverFactory.getDriver;
 
-import org.openqa.selenium.By;
-
 import projetobasico.core.BasePage;
 
 public class LoginPage extends BasePage {
@@ -21,7 +19,7 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void entrar() {
-		clicaBotao(By.xpath("//button[.='Entrar']"));
+		clicarBotaoPorTexto("Entrar");
 	}
 	
 	public void logar(String email, String senha) {

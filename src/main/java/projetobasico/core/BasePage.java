@@ -70,6 +70,10 @@ public class BasePage {
 		getDriver().findElement(By.id(id)).click();
 	}
 	
+	public void clicarBotaoPorTexto(String texto) {
+		clicaBotao(By.xpath("//button[.='"+ texto +"']"));
+	}
+	
 	public void clicaLink(String id) {
 		getDriver().findElement(By.linkText(id)).click();
 	}
