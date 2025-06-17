@@ -1,6 +1,12 @@
 package projetobasico.pages;
 
+import static projetobasico.core.DriverFactory.getDriver;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import projetobasico.core.BasePage;
 
@@ -44,5 +50,17 @@ public class MovimentacaoPage extends BasePage {
 	
 	public String obterMensagemErro() {
 		return obterTexto(By.xpath("//div[@class='alert alert-danger']"));
+	}
+	
+	public List<String> obterErros() {
+		List<WebElement> erros = getDriver().findElements(By.xpath("//div[@class='alert alert-danger']//li"));
+		
+		List<String> retorno = new ArrayList<String>();
+		
+		for(WebElement erro: erros) {
+			retorno.add(erro.getText());
+		}
+		
+		return retorno;
 	}
 }
