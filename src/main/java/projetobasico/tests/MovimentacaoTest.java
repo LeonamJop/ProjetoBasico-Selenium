@@ -1,6 +1,9 @@
 package projetobasico.tests;
 
+import static projetobasico.utils.DataUtils.obterDataFormatada;
+
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
@@ -9,6 +12,7 @@ import org.junit.Test;
 import projetobasico.core.BaseTest;
 import projetobasico.pages.MenuPage;
 import projetobasico.pages.MovimentacaoPage;
+import projetobasico.utils.DataUtils;
 
 public class MovimentacaoTest extends BaseTest{
 	
@@ -17,7 +21,7 @@ public class MovimentacaoTest extends BaseTest{
 	
 	@Test
 	public void deveInserirMovimentacao() {
-		menuPage.acessarTelaListarMovimentacao();
+		menuPage.acessarTelaInserirMovimentacao();
 		
 		movPage.setDataMovimentacao("04/06/2025");
 		movPage.setDataPagamento("04/06/2025");
@@ -33,7 +37,7 @@ public class MovimentacaoTest extends BaseTest{
 	
 	@Test
 	public void deveValidarCamposObrigatorios() {
-		menuPage.acessarTelaListarMovimentacao();
+		menuPage.acessarTelaInserirMovimentacao();
 		
 		movPage.salvar();
 		List<String> erros = movPage.obterErros();
@@ -52,5 +56,27 @@ public class MovimentacaoTest extends BaseTest{
 		)));
 		
 		Assert.assertEquals(6, erros.size());
+	}
+	
+	@Test
+	public void deveRetornarErroAoIncluirMovimentacaoFutura() {
+		menuPage.acessarTelaInserirMovimentacao();
+		
+		Date dataFutura = DataUtils.obterDataComDiferencaDias(5);
+		
+		movPage.setDataMovimentacao(obterDataFormatada(dataFutura));
+		movPage.setDataPagamento(obterDataFormatada(dataFutura));
+		movPage.setDescricao("Movimentação do Teste");
+		movPage.setInteressado("Interessado Qualquer");
+		movPage.setValor("500");
+		movPage.setConta("Conta do Teste Alterada");
+		movPage.setStatusPago();
+		movPage.salvar();
+		
+		List<String> erros = movPage.obterErros();
+			
+		Assert.assertTrue(erros.contains("Data da Movimentação deve ser menor ou igual à data atual"));
+		
+		Assert.assertEquals(1, erros.size());
 	}
 }
