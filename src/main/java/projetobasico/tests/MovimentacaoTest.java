@@ -1,5 +1,6 @@
 package projetobasico.tests;
 
+import static projetobasico.utils.DataUtils.obterDataComDiferencaDias;
 import static projetobasico.utils.DataUtils.obterDataFormatada;
 
 import java.util.Arrays;
@@ -12,7 +13,6 @@ import org.junit.Test;
 import projetobasico.core.BaseTest;
 import projetobasico.pages.MenuPage;
 import projetobasico.pages.MovimentacaoPage;
-import projetobasico.utils.DataUtils;
 
 public class MovimentacaoTest extends BaseTest{
 	
@@ -23,8 +23,8 @@ public class MovimentacaoTest extends BaseTest{
 	public void deveInserirMovimentacao() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
-		movPage.setDataMovimentacao("04/06/2025");
-		movPage.setDataPagamento("04/06/2025");
+		movPage.setDataMovimentacao(obterDataFormatada(new Date()));
+		movPage.setDataPagamento(obterDataFormatada(new Date()));
 		movPage.setDescricao("Movimentação do Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
@@ -62,7 +62,7 @@ public class MovimentacaoTest extends BaseTest{
 	public void deveRetornarErroAoIncluirMovimentacaoFutura() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
-		Date dataFutura = DataUtils.obterDataComDiferencaDias(5);
+		Date dataFutura = obterDataComDiferencaDias(5);
 		
 		movPage.setDataMovimentacao(obterDataFormatada(dataFutura));
 		movPage.setDataPagamento(obterDataFormatada(dataFutura));
