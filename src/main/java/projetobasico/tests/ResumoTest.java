@@ -1,5 +1,7 @@
 package projetobasico.tests;
 
+import static projetobasico.core.DriverFactory.getDriver;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,5 +21,12 @@ public class ResumoTest extends BaseTest {
 		resumoPage.excluirMovimentacao();
 		
 		Assert.assertEquals("Movimentação removida com sucesso!", resumoPage.obterMesagemSucesso());
+	}
+	
+	@Test
+	public void deveRetornarResumoMensal() {
+		menuPage.acessarTelaResumo();
+		
+		Assert.assertEquals("Seu Barriga - Extrato", getDriver().getTitle());
 	}
 }
