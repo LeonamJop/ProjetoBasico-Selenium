@@ -2,7 +2,6 @@ package projetobasico.tests;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import projetobasico.core.BaseTest;
 import projetobasico.pages.HomePage;
 

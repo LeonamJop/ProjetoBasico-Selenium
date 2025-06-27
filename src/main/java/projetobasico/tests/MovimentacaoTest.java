@@ -8,19 +8,22 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import projetobasico.core.BaseTest;
 import projetobasico.pages.MenuPage;
 import projetobasico.pages.MovimentacaoPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest{
 	
 	private MenuPage menuPage = new MenuPage();
 	private MovimentacaoPage movPage = new MovimentacaoPage();
 	
 	@Test
-	public void deveInserirMovimentacao() {
+	public void deve1InserirMovimentacao() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
 		movPage.setDataMovimentacao(obterDataFormatada(new Date()));
@@ -36,7 +39,7 @@ public class MovimentacaoTest extends BaseTest{
 	}
 	
 	@Test
-	public void deveValidarCamposObrigatorios() {
+	public void deve2ValidarCamposObrigatorios() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
 		movPage.salvar();
@@ -59,7 +62,7 @@ public class MovimentacaoTest extends BaseTest{
 	}
 	
 	@Test
-	public void deveRetornarErroAoIncluirMovimentacaoFutura() {
+	public void deve3RetornarErroAoIncluirMovimentacaoFutura() {
 		menuPage.acessarTelaInserirMovimentacao();
 		
 		Date dataFutura = obterDataComDiferencaDias(5);

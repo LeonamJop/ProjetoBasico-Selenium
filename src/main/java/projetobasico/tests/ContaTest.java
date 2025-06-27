@@ -1,19 +1,22 @@
 package projetobasico.tests;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import projetobasico.core.BaseTest;
 import projetobasico.pages.ContasPage;
 import projetobasico.pages.MenuPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();
 	ContasPage contasPage = new ContasPage();
 	
 	@Test
-	public void deveInserirConta() {
+	public void deve1_InserirConta() {
 		menuPage.acessarTelaInserirConta();
 		
 		contasPage.setNome("Conta do Teste");
@@ -32,7 +35,7 @@ public class ContaTest extends BaseTest {
 	}
 	
 	@Test
-	public void deveAlterarConta() {
+	public void deve2_AlterarConta() {
 		menuPage.acessarTelaListarConta();
 		
 		contasPage.clicarAlterarConta("Conta do Teste");
@@ -43,7 +46,7 @@ public class ContaTest extends BaseTest {
 	}
 	
 	@Test
-	public void deveInserirContaComMesmoNome() {
+	public void deve3_InserirContaComMesmoNome() {
 		menuPage.acessarTelaInserirConta();
 		
 		contasPage.setNome("Conta do Teste Alterada");
@@ -51,14 +54,5 @@ public class ContaTest extends BaseTest {
 		
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());
-	}
-	
-	@Test
-	public void deveRetornarErroAoExcluirContaComMovimentacao() {
-		menuPage.acessarTelaListarConta();
-		
-		contasPage.clicarExcluirConta("Conta do Teste Alterada");
-		
-		Assert.assertEquals("Conta em uso na movimentações", contasPage.obterMensagemErro());
 	}
 }

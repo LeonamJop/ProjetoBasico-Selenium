@@ -3,19 +3,22 @@ package projetobasico.tests;
 import static projetobasico.core.DriverFactory.getDriver;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import projetobasico.core.BaseTest;
 import projetobasico.pages.MenuPage;
 import projetobasico.pages.ResumoPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ResumoTest extends BaseTest {
 	
 	private MenuPage menuPage = new MenuPage();
 	private ResumoPage resumoPage = new ResumoPage();
 	
 	@Test
-	public void deveExcluirMovimentacao() {
+	public void deve1ExcluirMovimentacao() {
 		menuPage.acessarTelaResumo();
 		
 		resumoPage.excluirMovimentacao();
@@ -24,7 +27,7 @@ public class ResumoTest extends BaseTest {
 	}
 	
 	@Test
-	public void deveRetornarResumoMensal() {
+	public void deve2RetornarResumoMensal() {
 		menuPage.acessarTelaResumo();
 		
 		Assert.assertEquals("Seu Barriga - Extrato", getDriver().getTitle());
