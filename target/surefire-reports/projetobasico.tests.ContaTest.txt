@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+Test set: projetobasico.tests.ContaTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 11.384 s <<< FAILURE! - in projetobasico.tests.ContaTest
+deve1_InserirConta(projetobasico.tests.ContaTest)  Time elapsed: 11.239 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38dfe69aa29a9625555e93044ffff660, clickElement {id=f.28D33ABC554F62CFEE6AB3B81B6A3DC5.d.1334BC94DD526A5FB7CAA21374CD4433.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\casad\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63865/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (38dfe69aa29a9625555e93044ffff660)] -> link text: Contas]
+Session ID: 38dfe69aa29a9625555e93044ffff660
+	at projetobasico.tests.ContaTest.deve1_InserirConta(ContaTest.java:21)
+
+deveRetornarErroAoInserirContaSemNome(projetobasico.tests.ContaTest)  Time elapsed: 10.935 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38dfe69aa29a9625555e93044ffff660, clickElement {id=f.28D33ABC554F62CFEE6AB3B81B6A3DC5.d.1334BC94DD526A5FB7CAA21374CD4433.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\casad\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63865/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (38dfe69aa29a9625555e93044ffff660)] -> link text: Contas]
+Session ID: 38dfe69aa29a9625555e93044ffff660
+	at projetobasico.tests.ContaTest.deveRetornarErroAoInserirContaSemNome(ContaTest.java:31)
+
+deve2_AlterarConta(projetobasico.tests.ContaTest)  Time elapsed: 11.081 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38dfe69aa29a9625555e93044ffff660, clickElement {id=f.28D33ABC554F62CFEE6AB3B81B6A3DC5.d.1334BC94DD526A5FB7CAA21374CD4433.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\casad\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63865/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (38dfe69aa29a9625555e93044ffff660)] -> link text: Contas]
+Session ID: 38dfe69aa29a9625555e93044ffff660
+	at projetobasico.tests.ContaTest.deve2_AlterarConta(ContaTest.java:40)
+
+deve3_InserirContaComMesmoNome(projetobasico.tests.ContaTest)  Time elapsed: 11.382 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"link text","selector":"Adicionar"}
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38dfe69aa29a9625555e93044ffff660, findElement {value=Adicionar, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\casad\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63865/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 38dfe69aa29a9625555e93044ffff660
+	at projetobasico.tests.ContaTest.deve3_InserirContaComMesmoNome(ContaTest.java:51)
+
