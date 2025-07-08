@@ -47,9 +47,9 @@
 	        <version>2.22.2</version>
 	        <configuration>
 	          <includes>
-	            <include>**/projetobasico/suites/**/*.java</include>
+	            <include>**/projetobasico/suites/*.java</include>
 	          </includes>
-	          <parallel>all</parallel>
+	          <parallel>methods</parallel>
 	          <threadCount>3</threadCount>
 	        </configuration>
 	      </plugin>

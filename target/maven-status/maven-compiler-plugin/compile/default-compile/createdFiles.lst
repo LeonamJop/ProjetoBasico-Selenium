@@ -5,6 +5,7 @@ projetobasico\pages\HomePage.class
 projetobasico\utils\DataUtils.class
 projetobasico\pages\ContasPage.class
 projetobasico\tests\ResumoTest.class
+projetobasico\core\DriverFactory$2.class
 projetobasico\pages\LoginPage.class
 projetobasico\tests\ContaTest.class
 projetobasico\tests\MovimentacaoTest.class
