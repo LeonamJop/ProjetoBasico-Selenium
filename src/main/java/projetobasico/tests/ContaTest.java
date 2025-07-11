@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import projetobasico.core.BaseTest;
-import projetobasico.core.Propriedades;
 import projetobasico.pages.ContasPage;
 import projetobasico.pages.MenuPage;
 
@@ -39,8 +38,8 @@ public class ContaTest extends BaseTest {
 	public void deve2_AlterarConta() {
 		menuPage.acessarTelaListarConta();
 		
-		contasPage.clicarAlterarConta("Conta do Teste");
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.clicarAlterarConta("Conta para alterar");
+		contasPage.setNome("Conta para alterada");
 		contasPage.salvar();
 		
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMesagemSucesso());
@@ -50,7 +49,7 @@ public class ContaTest extends BaseTest {
 	public void deve3_InserirContaComMesmoNome() {
 		menuPage.acessarTelaInserirConta();
 		
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.setNome("Conta mesmo nome");
 		contasPage.salvar();
 		
 		

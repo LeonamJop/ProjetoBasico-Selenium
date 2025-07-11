@@ -3,7 +3,6 @@ package projetobasico.tests;
 import org.junit.Assert;
 import org.junit.Test;
 import projetobasico.core.BaseTest;
-import projetobasico.core.Propriedades;
 import projetobasico.pages.HomePage;
 import projetobasico.pages.MenuPage;
 
@@ -16,6 +15,6 @@ public class SaldoTest extends BaseTest {
 	public void deveTrazerSaldoConta() {
 		menu.acessarTelaPrincipal();
 		
-		Assert.assertEquals("500.00", page.obterSaldoConta(Propriedades.NOME_CONTA_ALTERADA));
+		Assert.assertEquals("534.00", page.obterSaldoConta("Conta para saldo"));
 	}
 }

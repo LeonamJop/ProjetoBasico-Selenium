@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: projetobasico.tests.ResumoTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.94 s - in projetobasico.tests.ResumoTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.985 s - in projetobasico.tests.ResumoTest
