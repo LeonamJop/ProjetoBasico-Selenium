@@ -28,4 +28,8 @@ public class LoginPage extends BasePage {
 		
 		entrar();
 	}
+	
+	public void resetar() {
+		clicaLink("reset");
+	}
 }
